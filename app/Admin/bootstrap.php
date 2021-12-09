@@ -4,6 +4,7 @@ use App\Admin\Extensions\Form\Image;
 use App\Admin\Extensions\Form\MultipleFile;
 use App\Admin\Extensions\Form\MultipleImage;
 use Dcat\Admin\Form;
+use Dcat\Admin\Layout\Navbar;
 
 /**
  * Dcat-admin - admin builder based on Laravel.
@@ -23,6 +24,11 @@ use Dcat\Admin\Form;
  * Admin::js('/packages/prettydocs/js/main.js');
  *
  */
+Admin::navbar(function (Navbar $navbar) {
+    if (!Dcat\Admin\Support\Helper::isAjaxRequest()) {
+        $navbar->right(App\Admin\Actions\AdminSetting::make()->render());
+    }
+});
 Form::extend('file', App\Admin\Extensions\Form\File::class);
 Form::extend('image', Image::class);
 Form::extend('multipleFile', MultipleFile::class);
