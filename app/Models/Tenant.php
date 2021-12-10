@@ -16,4 +16,17 @@ class Tenant extends BaseTenant implements TenantWithDatabase
 
     protected $guarded = [];
 
+    /**
+     * 自定义列.
+     *
+     * @return string[]
+     */
+    public static function getCustomColumns(): array
+    {
+        return [
+            'id',
+            'name',
+            'expired_at'
+        ];
+    }
 }

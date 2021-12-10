@@ -18,7 +18,7 @@ class CreateTenantsTable extends Migration
         Schema::create('tenants', function (Blueprint $table) {
             $table->string('id')->primary();
             $table->string('name')->comment('租户名称');
-            // your custom columns may go here
+            $table->timestamp('expired_at')->comment('过期时间');
 
             $table->timestamps();
             $table->json('data')->nullable();
