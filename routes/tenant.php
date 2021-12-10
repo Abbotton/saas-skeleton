@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 use Illuminate\Support\Facades\Route;
+use Stancl\Tenancy\Middleware\CheckTenantForMaintenanceMode;
 use Stancl\Tenancy\Middleware\InitializeTenancyByDomain;
 use Stancl\Tenancy\Middleware\PreventAccessFromCentralDomains;
 use Stancl\Tenancy\Middleware\ScopeSessions;
@@ -22,6 +23,7 @@ use Stancl\Tenancy\Middleware\ScopeSessions;
 Route::middleware([
     'web',
     InitializeTenancyByDomain::class,
+    CheckTenantForMaintenanceMode::class,
     PreventAccessFromCentralDomains::class,
     ScopeSessions::class,
 ])->group(function () {

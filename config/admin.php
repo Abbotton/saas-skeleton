@@ -1,5 +1,6 @@
 <?php
 
+use Stancl\Tenancy\Middleware\CheckTenantForMaintenanceMode;
 use Stancl\Tenancy\Middleware\InitializeTenancyByDomain;
 use Stancl\Tenancy\Middleware\PreventAccessFromCentralDomains;
 use Stancl\Tenancy\Middleware\ScopeSessions;
@@ -78,6 +79,7 @@ return [
         'middleware' => [
             'web',
             InitializeTenancyByDomain::class,
+            CheckTenantForMaintenanceMode::class,
             PreventAccessFromCentralDomains::class,
             ScopeSessions::class,
             'admin'

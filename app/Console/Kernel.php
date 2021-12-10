@@ -15,7 +15,8 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        // $schedule->command('inspire')->hourly();
+        // 检查租户是否过期
+        $schedule->command('tenants:expire_check')->everyMinute()->withoutOverlapping();
     }
 
     /**
