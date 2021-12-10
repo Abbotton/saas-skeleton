@@ -70,8 +70,6 @@ return [
     |
     */
     'route' => [
-        'domain' => env('ADMIN_ROUTE_DOMAIN'),
-
         'prefix' => env('ADMIN_ROUTE_PREFIX', 'admin'),
 
         'namespace' => 'App\\Admin\\Controllers',
@@ -376,4 +374,13 @@ return [
         // the extension files will be generated in this directory.
         'dir' => base_path('dcat-admin-extensions'),
     ],
+
+    /*
+     |--------------------------------------------------------------------------
+     | 多后台
+     |--------------------------------------------------------------------------
+     */
+    'multi_app' => [
+        'central' => true,
+    ]
 ];
