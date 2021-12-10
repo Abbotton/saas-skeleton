@@ -4,6 +4,7 @@ use Dcat\Admin\Admin;
 use Dcat\Admin\Grid;
 use Dcat\Admin\Form;
 use Dcat\Admin\Grid\Filter;
+use Dcat\Admin\Layout\Navbar;
 use Dcat\Admin\Show;
 
 /**
@@ -24,3 +25,8 @@ use Dcat\Admin\Show;
  * Admin::js('/packages/prettydocs/js/main.js');
  *
  */
+Admin::navbar(function (Navbar $navbar) {
+    if (!Dcat\Admin\Support\Helper::isAjaxRequest()) {
+        $navbar->right(App\Admin\Actions\AdminSetting::make()->render());
+    }
+});

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Admin\Forms;
+namespace App\Central\Forms;
 
 use Dcat\Admin\Contracts\LazyRenderable;
 use Dcat\Admin\Traits\LazyWidget;
