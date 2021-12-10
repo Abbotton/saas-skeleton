@@ -2,6 +2,7 @@
 
 use Stancl\Tenancy\Middleware\InitializeTenancyByDomain;
 use Stancl\Tenancy\Middleware\PreventAccessFromCentralDomains;
+use Stancl\Tenancy\Middleware\ScopeSessions;
 
 return [
 
@@ -78,6 +79,7 @@ return [
             'web',
             InitializeTenancyByDomain::class,
             PreventAccessFromCentralDomains::class,
+            ScopeSessions::class,
             'admin'
         ],
 
@@ -166,7 +168,7 @@ return [
             'auth/logout',
         ],
 
-        'enable_session_middleware' => true,
+        'enable_session_middleware' => false,
     ],
 
     /*
