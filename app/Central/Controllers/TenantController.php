@@ -2,6 +2,7 @@
 
 namespace App\Central\Controllers;
 
+use App\Central\Actions\Grid\SwitchToTenantDashboard;
 use App\Central\Repositories\Tenant;
 use App\Models\Domain;
 use Dcat\Admin\Form;
@@ -40,6 +41,10 @@ class TenantController extends AdminController
             $grid->filter(function (Grid\Filter $filter) {
                 $filter->equal('id');
                 $filter->like('name');
+            });
+            // 添加登陆至租户后台的功能.
+            $grid->actions(function (Grid\Displayers\Actions $actions) {
+                $actions->append(new SwitchToTenantDashboard());
             });
         });
     }
