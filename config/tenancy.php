@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 use App\Models\Tenant;
 use App\Models\Domain;
+use Dcat\Admin\Models\AdminTablesSeeder;
 
 return [
     'tenant_model' => Tenant::class,
@@ -190,7 +191,7 @@ return [
      * Parameters used by the tenants:seed command.
      */
     'seeder_parameters' => [
-        '--class' => 'DatabaseSeeder', // root seeder class
+        '--class' => AdminTablesSeeder::class, // root seeder class
         // '--force' => true,
     ],
 ];
