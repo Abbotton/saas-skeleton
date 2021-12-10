@@ -36,6 +36,8 @@ namespace Dcat\Admin {
      * @property Grid\Column|Collection password
      * @property Grid\Column|Collection avatar
      * @property Grid\Column|Collection remember_token
+     * @property Grid\Column|Collection domain
+     * @property Grid\Column|Collection tenant_id
      * @property Grid\Column|Collection uuid
      * @property Grid\Column|Collection connection
      * @property Grid\Column|Collection queue
@@ -48,6 +50,12 @@ namespace Dcat\Admin {
      * @property Grid\Column|Collection tokenable_id
      * @property Grid\Column|Collection abilities
      * @property Grid\Column|Collection last_used_at
+     * @property Grid\Column|Collection ip_address
+     * @property Grid\Column|Collection user_agent
+     * @property Grid\Column|Collection last_activity
+     * @property Grid\Column|Collection auth_guard
+     * @property Grid\Column|Collection redirect_url
+     * @property Grid\Column|Collection data
      * @property Grid\Column|Collection email_verified_at
      *
      * @method Grid\Column|Collection id(string $label = null)
@@ -75,6 +83,8 @@ namespace Dcat\Admin {
      * @method Grid\Column|Collection password(string $label = null)
      * @method Grid\Column|Collection avatar(string $label = null)
      * @method Grid\Column|Collection remember_token(string $label = null)
+     * @method Grid\Column|Collection domain(string $label = null)
+     * @method Grid\Column|Collection tenant_id(string $label = null)
      * @method Grid\Column|Collection uuid(string $label = null)
      * @method Grid\Column|Collection connection(string $label = null)
      * @method Grid\Column|Collection queue(string $label = null)
@@ -87,6 +97,12 @@ namespace Dcat\Admin {
      * @method Grid\Column|Collection tokenable_id(string $label = null)
      * @method Grid\Column|Collection abilities(string $label = null)
      * @method Grid\Column|Collection last_used_at(string $label = null)
+     * @method Grid\Column|Collection ip_address(string $label = null)
+     * @method Grid\Column|Collection user_agent(string $label = null)
+     * @method Grid\Column|Collection last_activity(string $label = null)
+     * @method Grid\Column|Collection auth_guard(string $label = null)
+     * @method Grid\Column|Collection redirect_url(string $label = null)
+     * @method Grid\Column|Collection data(string $label = null)
      * @method Grid\Column|Collection email_verified_at(string $label = null)
      */
     class Grid {}
@@ -119,6 +135,8 @@ namespace Dcat\Admin {
      * @property Show\Field|Collection password
      * @property Show\Field|Collection avatar
      * @property Show\Field|Collection remember_token
+     * @property Show\Field|Collection domain
+     * @property Show\Field|Collection tenant_id
      * @property Show\Field|Collection uuid
      * @property Show\Field|Collection connection
      * @property Show\Field|Collection queue
@@ -131,6 +149,12 @@ namespace Dcat\Admin {
      * @property Show\Field|Collection tokenable_id
      * @property Show\Field|Collection abilities
      * @property Show\Field|Collection last_used_at
+     * @property Show\Field|Collection ip_address
+     * @property Show\Field|Collection user_agent
+     * @property Show\Field|Collection last_activity
+     * @property Show\Field|Collection auth_guard
+     * @property Show\Field|Collection redirect_url
+     * @property Show\Field|Collection data
      * @property Show\Field|Collection email_verified_at
      *
      * @method Show\Field|Collection id(string $label = null)
@@ -158,6 +182,8 @@ namespace Dcat\Admin {
      * @method Show\Field|Collection password(string $label = null)
      * @method Show\Field|Collection avatar(string $label = null)
      * @method Show\Field|Collection remember_token(string $label = null)
+     * @method Show\Field|Collection domain(string $label = null)
+     * @method Show\Field|Collection tenant_id(string $label = null)
      * @method Show\Field|Collection uuid(string $label = null)
      * @method Show\Field|Collection connection(string $label = null)
      * @method Show\Field|Collection queue(string $label = null)
@@ -170,6 +196,12 @@ namespace Dcat\Admin {
      * @method Show\Field|Collection tokenable_id(string $label = null)
      * @method Show\Field|Collection abilities(string $label = null)
      * @method Show\Field|Collection last_used_at(string $label = null)
+     * @method Show\Field|Collection ip_address(string $label = null)
+     * @method Show\Field|Collection user_agent(string $label = null)
+     * @method Show\Field|Collection last_activity(string $label = null)
+     * @method Show\Field|Collection auth_guard(string $label = null)
+     * @method Show\Field|Collection redirect_url(string $label = null)
+     * @method Show\Field|Collection data(string $label = null)
      * @method Show\Field|Collection email_verified_at(string $label = null)
      */
     class Show {}
