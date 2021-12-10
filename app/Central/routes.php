@@ -16,5 +16,5 @@ Route::group([
     // 租户管理
     $router->resource('/tenant', 'TenantController');
     // 域名管理
-    $router->resource('/domain', 'DomainController')->only(['index', 'delete', 'show']);
+    $router->resource('/domain', 'DomainController')->only(['index', 'destroy', 'show']);
 });
