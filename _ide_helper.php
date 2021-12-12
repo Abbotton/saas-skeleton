@@ -16378,6 +16378,21 @@
         {
                         \Stancl\Tenancy\Tenancy::flushMacros();
         }
+                    /**
+         * 
+         *
+         * @see \Stancl\Tenancy\Features\UserImpersonation::bootstrap()
+         * @param \Stancl\Tenancy\Contracts\Tenant $tenant
+         * @param string $userId
+         * @param string $redirectUrl
+         * @param string|null $authGuard
+         * @return \Stancl\Tenancy\Database\Models\ImpersonationToken 
+         * @static 
+         */ 
+        public static function impersonate($tenant, $userId, $redirectUrl, $authGuard = null)
+        {
+                        return \Stancl\Tenancy\Tenancy::impersonate($tenant, $userId, $redirectUrl, $authGuard);
+        }
          
     }
             /**
@@ -16548,6 +16563,32 @@
         public static function hasValidRelativeSignature()
         {
                         return \Illuminate\Http\Request::hasValidRelativeSignature();
+        }
+         
+    }
+     
+}
+
+    namespace Stancl\Tenancy { 
+            /**
+     * 
+     *
+     */ 
+        class Tenancy {
+                    /**
+         * 
+         *
+         * @see \Stancl\Tenancy\Features\UserImpersonation::bootstrap()
+         * @param \Stancl\Tenancy\Contracts\Tenant $tenant
+         * @param string $userId
+         * @param string $redirectUrl
+         * @param string|null $authGuard
+         * @return \Stancl\Tenancy\Database\Models\ImpersonationToken 
+         * @static 
+         */ 
+        public static function impersonate($tenant, $userId, $redirectUrl, $authGuard = null)
+        {
+                        return \Stancl\Tenancy\Tenancy::impersonate($tenant, $userId, $redirectUrl, $authGuard);
         }
          
     }
