@@ -3,6 +3,7 @@
 use Illuminate\Routing\Router;
 use Illuminate\Support\Facades\Route;
 use Dcat\Admin\Admin;
+use Mosiboom\DcatIframeTab\Controllers\IframeController;
 
 Admin::routes();
 
@@ -12,7 +13,9 @@ Route::group([
     'middleware' => config('central.route.middleware'),
 ], function (Router $router) {
     // 首页
-    $router->get('/', 'HomeController@index');
+    $router->get('/',  [IframeController::class, 'index']);
+    // 仪表盘
+    $router->get('/dashboard', 'HomeController@index');
     // 租户管理
     $router->resource('/tenant', 'TenantController');
     // 域名管理

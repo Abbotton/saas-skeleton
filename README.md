@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://banners.beyondco.de/SaaS%20skeleton.png?theme=light&packageManager=&packageName=&pattern=cutout&style=style_1&description=Build+with+Laravel+%26+Dcat+Admin&md=0&showWatermark=0&fontSize=100px&images=cube-transparent&widths=300&heights=300">
+<img src="https://i.imgur.com/3Bi7tR3.jpeg" alt="banner">
 </p>
 
 ### 关于
@@ -19,6 +19,7 @@
 - [x] 内置系统配置模板，直接修改对应表单即可添加系统配置项
 - [x] 自动检测租户是否已过期
 - [x] 一键登陆至租户后台
+- [x] 整合[`dcat-iframe-tab`](https://github.com/mosiboom/dcat-iframe-tab)
 - [ ] 集成在线支付功能，供租户自动续费
 
 ### 安装
@@ -34,14 +35,19 @@ cd saas-skeleton && composer install
 cp .env.example .env
 
 # 生成应用key
-
 php artisan key:generate
 
 # 修改.env中数据库以及APP_URL相关配置
 vi .env
 
+# 发布dcat-admin相关资源
+php artisan admin:publish
+
+# 发布dcat-iframe-tab相关资源
+php artisan vendor:publish --tag=iframe-tab && php artisan vendor:publish --tag=iframe-tab.config
+
 # 执行以下命令完成安装
-php artisan admin:publish && php artisan admin:install && php artisan saas:init
+php artisan admin:install && php artisan saas:init
 
 # done !
 ```

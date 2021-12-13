@@ -48,5 +48,7 @@ class SaasInit extends Command
                 'created_at' => $createdAt,
             ]
         ]);
+        // 更新首页URL
+        Menu::where('id', 1)->update(['uri' => '/dashboard']);
     }
 }

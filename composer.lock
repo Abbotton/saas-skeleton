@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "380e3d0cbbc71047f486d13363bfa189",
+    "content-hash": "95272d58d47400505393de963f42f4d8",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2465,6 +2465,66 @@
                 }
             ],
             "time": "2021-10-01T21:08:31+00:00"
+        },
+        {
+            "name": "mosiboom/dcat-iframe-tab",
+            "version": "1.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mosiboom/dcat-iframe-tab.git",
+                "reference": "805adbc8af578dbde103b5cf81f04348113980ce"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mosiboom/dcat-iframe-tab/zipball/805adbc8af578dbde103b5cf81f04348113980ce",
+                "reference": "805adbc8af578dbde103b5cf81f04348113980ce",
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+            },
+            "require": {
+                "php": ">=7.2.5"
+            },
+            "type": "laravel-extension",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Mosiboom\\DcatIframeTab\\IframeTabProvider"
+                    ],
+                    "aliases": {
+                        "IframeTab": "Mosiboom\\DcatIframeTab\\IframeTab"
+                    },
+                    "dont-discover": []
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Mosiboom\\DcatIframeTab\\": "src/"
+                },
+                "files": [
+                    "src/helpers.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jasper",
+                    "email": "936022546@qq.com"
+                }
+            ],
+            "description": "iframe-tab framework for dcat-admin",
+            "support": {
+                "issues": "https://github.com/mosiboom/dcat-iframe-tab/issues",
+                "source": "https://github.com/mosiboom/dcat-iframe-tab/tree/1.2.1"
+            },
+            "time": "2021-09-17T10:08:28+00:00"
         },
         {
             "name": "nesbot/carbon",
