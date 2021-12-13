@@ -33,6 +33,10 @@ cd saas-skeleton && composer install
 # 复制.env.example为.env
 cp .env.example .env
 
+# 生成应用key
+
+php artisan key:generate
+
 # 修改.env中数据库以及APP_URL相关配置
 vi .env
 
