@@ -71,7 +71,7 @@ php artisan admin:install && php artisan saas:init
 
 修改`app/Central/Forms/AdminSetting.php`文件即可。
 
-2、**如何添加租户的系统配置**
+3、**如何添加租户的系统配置**
 
 修改`app/Admin/Forms/AdminSetting.php`文件即可。
 
